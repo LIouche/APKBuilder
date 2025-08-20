@@ -106,6 +106,7 @@ Dependencies
 ```
 ---
 
+---
 <details>
 <summary>⚠️ Notes</summary>
 Does not support Scoped Storage
@@ -120,7 +121,7 @@ Temp files are automatically removed
 </details>
 ---
 
-🤝 Contributing
+## 🤝 Contributing
 
 Contributions are very welcome! 🎉
 
