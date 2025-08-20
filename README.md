@@ -13,12 +13,12 @@
 
 ## Features
 
-- 🔧 **Full pipeline**: Java → Dex → APK → Signed  
-- 📚 **Library support**: Handles JAR + AAR dependencies  
-- ⚡ **Configurable** via a single `BuildConfig`  
-- 🔒 **Built-in signing** (v1 scheme, Bouncy Castle)  
-- 📝 **Unified logging** with callbacks  
-- 🧹 Auto cleanup of temp files  
+- **Full pipeline**: Java → Dex → APK → Signed  
+- **Library support**: Handles JAR + AAR dependencies  
+- **Configurable** via a single `BuildConfig`  
+- **Built-in signing** (v1 scheme, Bouncy Castle)  
+- **Unified logging** with callbacks  
+- Auto cleanup of temp files  
 
 ---
 
@@ -46,8 +46,7 @@ apkbuilder/
 ```
 ---
 
- Build Pipeline
-```
+``` Build Pipeline
 [ Resources ] --AAPT2--> [ R.java + Binary ] 
         ↓
 [ Java Sources ] --ECJ--> [ .class Files ]
@@ -61,8 +60,7 @@ apkbuilder/
 ```
 ---
 
- Usage Example
-```
+``` Example usage
 val compiler = Compiler(context)
 
 val config = Compiler.BuildConfig(
@@ -90,9 +88,7 @@ compiler.build(config, object : Compiler.CompilerListener {
 
 ```
 ---
-
-Dependencies
-```
+``` Dependency
 🔑 Bouncy Castle → cryptography/signing
 
 💻 ECJ → Java compiler
