@@ -105,20 +105,12 @@ Dependencies
 
 ```
 ---
-
----
-<details>
-<summary>⚠️ Notes</summary>
-Does not support Scoped Storage
-
-libaapt2.so must be bundled inside assets/
-
-You need to create your own keystore.
-
-Runs on a single background thread
-
-Temp files are automatically removed
-</details>
+## ⚠️ Notes
+- Does not support Scoped Storage
+- libaapt2.so must be bundled inside assets/
+- You need to create your own keystore.
+- Runs on a single background thread
+- Temp files are automatically removed
 ---
 
 ## 🤝 Contributing
@@ -139,16 +131,11 @@ Contributions are very welcome! 🎉
 
 5. Open a Pull Request 🚀
 
-
-
-
 ---
 
 📜 License
 
 This project is licensed under the LGPL-3.0.
 See LICENSE for full details.
-
-
 ---
 
