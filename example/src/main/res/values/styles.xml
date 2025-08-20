@@ -1,0 +1,11 @@
+<resources>
+	<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.Material3" />
+	<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.Material3" />
+	<style name="AppTheme.DebugActivity" parent="AppTheme">
+		<item name="windowActionBar">true</item>
+		<item name="windowNoTitle">false</item>
+	</style>
+	<style name="ShapeAppearance.MyFab" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">30dp</item>
+    </style>
+</resources>

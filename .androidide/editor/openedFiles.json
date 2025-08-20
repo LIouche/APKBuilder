@@ -1,0 +1,65 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/APKBuilder/settings.gradle.kts",
+      "selection": {
+        "end": {
+          "column": 45,
+          "index": 290,
+          "line": 13
+        },
+        "start": {
+          "column": 45,
+          "index": 290,
+          "line": 13
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/APKBuilder/apkbuilder/src/main/java/com/llouche/apkbuilder/compiler/Compiler.kt",
+      "selection": {
+        "end": {
+          "column": 43,
+          "index": 7645,
+          "line": 213
+        },
+        "start": {
+          "column": 43,
+          "index": 7645,
+          "line": 213
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/APKBuilder/example/src/main/java/com/llouche/example/MainActivity.kt",
+      "selection": {
+        "end": {
+          "column": 5,
+          "index": 12858,
+          "line": 345
+        },
+        "start": {
+          "column": 5,
+          "index": 12858,
+          "line": 345
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/APKBuilder/README.md",
+      "selection": {
+        "end": {
+          "column": 36,
+          "index": 3057,
+          "line": 118
+        },
+        "start": {
+          "column": 36,
+          "index": 3057,
+          "line": 118
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/APKBuilder/README.md"
+}

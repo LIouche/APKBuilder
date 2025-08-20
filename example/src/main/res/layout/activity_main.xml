@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="?android:colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <!-- Header Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="12dp"
+            
+            app:cardElevation="1dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@color/custom1"
+            app:cardCornerRadius="20dp"
+            android:id="@+id/cardview3">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:text="APKBuilder by Llouche"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Project Paths Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="12dp"
+            
+            app:cardElevation="1dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@color/custom1"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:textSize="18sp"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:text="Project Paths"
+                    android:textStyle="bold" />
+
+                <!-- android.jar path input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput_androidJar"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    app:endIconDrawable="@drawable/file"
+                    app:endIconTint="?attr/colorOnSurfaceVariant"
+                    app:endIconMode="custom"
+                    android:layoutDirection="ltr"
+                    android:hint="Path to android.jar"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_androidJar"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:inputType="textUri" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Java sources path input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput_sourceDir"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    app:endIconDrawable="@drawable/folder_open"
+                    app:endIconTint="?attr/colorOnSurfaceVariant"
+                    app:endIconMode="custom"
+                    android:hint="Path to Java sources"
+                    android:layoutDirection="ltr"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_marginTop="12dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_sourceDir"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:inputType="textUri" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Output directory input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput_outputDir"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    app:endIconDrawable="@drawable/folder_open"
+                    app:endIconTint="?attr/colorOnSurfaceVariant"
+                    app:endIconMode="custom"
+                    android:layoutDirection="ltr"
+                    android:hint="Output directory"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_marginTop="12dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_outputDir"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:inputType="textUri" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Resources directory input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput_resDir"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:hint="Path to res directory"
+                    app:endIconDrawable="@drawable/folder_open"
+                    app:endIconTint="?attr/colorOnSurfaceVariant"
+                    app:endIconMode="custom"
+                    android:layoutDirection="ltr"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_marginTop="12dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_resDir"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:inputType="textUri" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Manifest file input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput_manifestDir"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    app:endIconDrawable="@drawable/file"
+                    app:endIconTint="?attr/colorOnSurfaceVariant"
+                    app:endIconMode="custom"
+                    android:layoutDirection="ltr"
+                    android:hint="Path to AndroidManifest.xml"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_marginTop="12dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_manifestDir"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:inputType="textUri" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Libraries directory input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput_librariesDir"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    app:endIconDrawable="@drawable/folder_open"
+                    app:endIconTint="?attr/colorOnSurfaceVariant"
+                    app:endIconMode="custom"
+                    android:layoutDirection="ltr"
+                    android:hint="Path to libraries (.jar/.aar)"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_marginTop="12dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_librariesDir"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:inputType="textUri" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:textSize="18sp"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:layout_marginTop="16dp"
+                    android:text="Build Configuration"
+                    android:textStyle="bold" />
+
+                <!-- Min SDK Version input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput_minSdk"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:hint="Min SDK Version" 
+                    android:layoutDirection="ltr"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_marginTop="8dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_minSdk"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:inputType="number"
+                        android:text="21" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Target SDK Version input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput_targetSdk"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:hint="Target SDK Version"
+                    android:layoutDirection="ltr"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_marginTop="8dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_targetSdk"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:inputType="number"
+                        android:text="29" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Version Code input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput_versionCode"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:hint="Version Code"
+                    android:layoutDirection="ltr"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_marginTop="8dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_versionCode"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:inputType="number"
+                        android:text="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Version Name input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput_versionName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:hint="Version Name"
+                    android:layoutDirection="ltr"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_marginTop="8dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_versionName"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:inputType="text"
+                        android:text="1.0" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textSize="16sp"
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/comp"
+                    style="@style/Widget.Material3.Button"
+                    android:text="Compile / Build Project" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Logs Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="12dp"
+            
+            app:cardElevation="1dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@color/custom1"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:textSize="18sp"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:text="Compilation Log"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:scrollbars="vertical"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    android:ellipsize="none"
+                    android:textSize="14sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:scrollHorizontally="false"
+                    android:textIsSelectable="true"
+                    android:id="@+id/logs" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
