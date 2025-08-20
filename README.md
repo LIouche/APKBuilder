@@ -9,7 +9,6 @@
 
 >  A **lightweight Kotlin build system** that compiles your **Java source + Android resources** into a fully signed `.apk`.  
 > Think of it as a **mini-Gradle**: simple, fast, and hackable.
-
 ---
 
 ## Features
@@ -101,8 +100,6 @@ Dependencies
 📦 D8/R8 → Dex conversion
 
 ⚡ libaapt2.so → Native resource compilation
-
-
 ```
 ---
 ## ⚠️ Notes
@@ -118,19 +115,10 @@ Dependencies
 Contributions are very welcome! 🎉
 
 1. Fork the repo
-
-
 2. Create a branch: git checkout -b feature/amazing-idea
-
-
 3. Commit changes: git commit -m "Added amazing feature"
-
-
 4. Push to your fork: git push origin feature/amazing-idea
-
-
 5. Open a Pull Request 🚀
-
 ---
 
 📜 License
