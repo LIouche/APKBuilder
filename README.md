@@ -1,6 +1,6 @@
 ---
 
-# 📦 APKBuilder
+# APKBuilder
 
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](LICENSE)
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9.0-purple?logo=kotlin)](https://kotlinlang.org/)
@@ -12,7 +12,7 @@
 
 ---
 
-## ✨ Features
+## Features
 
 - 🔧 **Full pipeline**: Java → Dex → APK → Signed  
 - 📚 **Library support**: Handles JAR + AAR dependencies  
@@ -23,7 +23,7 @@
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```text
 apkbuilder/
@@ -47,7 +47,7 @@ apkbuilder/
 ```
 ---
 
-⚙️ Build Pipeline
+ Build Pipeline
 ```
 [ Resources ] --AAPT2--> [ R.java + Binary ] 
         ↓
@@ -62,7 +62,7 @@ apkbuilder/
 ```
 ---
 
-🛠️ Usage Example
+ Usage Example
 ```
 val compiler = Compiler(context)
 
@@ -92,7 +92,7 @@ compiler.build(config, object : Compiler.CompilerListener {
 ```
 ---
 
-📋 Dependencies
+Dependencies
 ```
 🔑 Bouncy Castle → cryptography/signing
 
@@ -150,10 +150,4 @@ See LICENSE for full details.
 
 
 ---
-
----
-
-This one feels **visual** without images: badges, emoji headers, ASCII diagrams, collapsible notes, and clean spacing.  
-
-👉 Do you also want me to add a **“Quick Start with JitPack”** section (so others can just drop it into `build.gradle`) or keep it **source-only** for now?
 
