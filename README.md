@@ -45,8 +45,8 @@ apkbuilder/
 
 ```
 ---
-
-``` Build Pipeline
+## Build Pipeline
+```
 [ Resources ] --AAPT2--> [ R.java + Binary ] 
         ↓
 [ Java Sources ] --ECJ--> [ .class Files ]
@@ -59,8 +59,8 @@ apkbuilder/
 
 ```
 ---
-
-``` Example usage
+## Example Usage
+``` kotlin
 val compiler = Compiler(context)
 
 val config = Compiler.BuildConfig(
@@ -88,7 +88,8 @@ compiler.build(config, object : Compiler.CompilerListener {
 
 ```
 ---
-``` Dependency
+## Used Dependencies
+``` 
 🔑 Bouncy Castle → cryptography/signing
 
 💻 ECJ → Java compiler
