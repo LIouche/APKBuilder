@@ -110,15 +110,8 @@ Dependencies
 - Temp files are automatically removed
 ---
 
-## 🤝 Contributing
-
-Contributions are very welcome! 🎉
-
-1. Fork the repo
-2. Create a branch: git checkout -b feature/amazing-idea
-3. Commit changes: git commit -m "Added amazing feature"
-4. Push to your fork: git push origin feature/amazing-idea
-5. Open a Pull Request 🚀
+## 🤝 Contributions
+Contributions are very welcome.
 ---
 
 📜 License
