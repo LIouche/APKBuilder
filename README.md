@@ -110,8 +110,8 @@ Dependencies
 - Temp files are automatically removed
 ---
 
-## 🤝 Contributions
-Contributions are very welcome.
+## 🤝 Collab
+Want to collab? Email me at Llouche@proton.me
 ---
 
 📜 License
