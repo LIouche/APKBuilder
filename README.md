@@ -7,7 +7,7 @@
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen?logo=github)](#-build-process)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)](#-contributing)
 
-> 🚀 A **lightweight Kotlin build system** that compiles your **Java source + Android resources** into a fully signed `.apk`.  
+>  A **lightweight Kotlin build system** that compiles your **Java source + Android resources** into a fully signed `.apk`.  
 > Think of it as a **mini-Gradle**: simple, fast, and hackable.
 
 ---
@@ -48,7 +48,7 @@ apkbuilder/
 ---
 
 ⚙️ Build Pipeline
-
+```
 [ Resources ] --AAPT2--> [ R.java + Binary ] 
         ↓
 [ Java Sources ] --ECJ--> [ .class Files ]
@@ -59,11 +59,11 @@ apkbuilder/
         ↓
 [ APKSigner ] --> [ ✅ Signed APK ]
 
-
+```
 ---
 
 🛠️ Usage Example
-
+```
 val compiler = Compiler(context)
 
 val config = Compiler.BuildConfig(
@@ -89,11 +89,11 @@ compiler.build(config, object : Compiler.CompilerListener {
     override fun onBuildFailed(error: String?) = println("❌ Failed: $error")
 })
 
-
+```
 ---
 
 📋 Dependencies
-
+```
 🔑 Bouncy Castle → cryptography/signing
 
 💻 ECJ → Java compiler
@@ -103,7 +103,7 @@ compiler.build(config, object : Compiler.CompilerListener {
 ⚡ libaapt2.so → Native resource compilation
 
 
-
+```
 ---
 
 <details>
