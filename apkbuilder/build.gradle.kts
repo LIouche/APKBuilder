@@ -1,16 +1,17 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
+    id("maven-publish")
 }
 
 android {
     namespace = "com.llouche.apkbuilder"
     compileSdk = 33
-    
+
     defaultConfig {
         minSdk = 26
 
-        vectorDrawables { 
+        vectorDrawables {
             useSupportLibrary = true
         }
     }
@@ -23,7 +24,10 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = true
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
 
@@ -44,4 +48,18 @@ dependencies {
     implementation("com.android.tools:r8:8.11.18")
     implementation("org.bouncycastle:bcprov-jdk15on:1.70")
     implementation("org.bouncycastle:bcpkix-jdk15on:1.70")
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+
+                groupId = "com.github.LIouche"
+                artifactId = "APKBuilder"
+                version = "1.0.0"
+            }
+        }
+    }
 }
