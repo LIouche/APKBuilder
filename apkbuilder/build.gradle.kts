@@ -10,10 +10,7 @@ android {
 
     defaultConfig {
         minSdk = 26
-
-        vectorDrawables {
-            useSupportLibrary = true
-        }
+        vectorDrawables.useSupportLibrary = true
     }
 
     compileOptions {
@@ -50,16 +47,13 @@ dependencies {
     implementation("org.bouncycastle:bcpkix-jdk15on:1.70")
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("release") {
-                from(components["release"])
-
-                groupId = "com.github.LIouche.APKBuilder"
-                artifactId = "apkbuilder"
-                version = "1.0.0"
-            }
+publishing {
+    publications {
+        create<MavenPublication>("release") {
+            from(components["release"])
+            groupId = "com.github.LIouche"
+            artifactId = "apkbuilder"
+            version = project.findProperty("version")?.toString() ?: "1.0.0-SNAPSHOT"
         }
     }
 }
