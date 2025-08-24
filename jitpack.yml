@@ -2,4 +2,7 @@ jdk:
   - openjdk17
 
 before_install:
-  - ./gradlew clean build :apkbuilder:publishToMavenLocal
+  - ./gradlew clean build
+
+install:
+  - ./gradlew :apkbuilder:publish
