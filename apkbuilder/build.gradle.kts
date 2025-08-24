@@ -56,8 +56,8 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 from(components["release"])
 
-                groupId = "com.github.LIouche"
-                artifactId = "APKBuilder"
+                groupId = "com.github.LIouche.APKBuilder"
+                artifactId = "apkbuilder"
                 version = "1.0.0"
             }
         }
